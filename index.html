@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>D S Control System – Control Panel Manufacturers, Ambarnath</title>
+  <meta name="description" content="D S Control System – Manufacturer of Power, Electric & FLP Control Panels in Ambarnath, Thane, Maharashtra."/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%23F97316'/><text x='50' y='68' font-family='Arial Black,sans-serif' font-size='46' font-weight='900' text-anchor='middle' fill='white'>DS</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root {
+      --orange: #F97316;
+      --orange-dark: #EA6810;
+      --bg: #0F1117;
+      --surface: #161B27;
+      --border: #232B3E;
+      --text: #E2E8F0;
+      --muted: #8B95A8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(15,17,23,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      height: 56px; display: flex; align-items: center;
+    }
+    .nav-inner {
+      max-width: 1100px; margin: 0 auto; padding: 0 20px;
+      width: 100%; display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .logo-mark {
+      width: 32px; height: 32px; border-radius: 6px; background: var(--orange);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 900; font-size: 13px; color: #fff; letter-spacing: -.5px;
+    }
+    .logo-text { font-weight: 700; font-size: 14px; color: #fff; }
+    .nav-links { display: flex; align-items: center; gap: 24px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: #fff; }
+    .btn-nav {
+      background: var(--orange); color: #fff !important;
+      padding: 8px 16px; border-radius: 6px;
+      font-size: 13px; font-weight: 600; text-decoration: none;
+      display: flex; align-items: center; gap: 6px;
+      transition: background .2s;
+    }
+    .btn-nav:hover { background: var(--orange-dark) !important; }
+
+    /* HERO */
+    .hero {
+      padding: 100px 20px 64px;
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 48px; align-items: center;
+    }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(249,115,22,0.1); border: 1px solid rgba(249,115,22,0.25);
+      border-radius: 100px; padding: 4px 14px;
+      font-size: 12px; font-weight: 600; color: var(--orange);
+      letter-spacing: .04em; text-transform: uppercase; margin-bottom: 20px;
+    }
+    .hero-tag span { width: 5px; height: 5px; border-radius: 50%; background: var(--orange); display: block; }
+    .hero h1 {
+      font-size: clamp(28px, 4vw, 44px); font-weight: 800;
+      line-height: 1.15; color: #fff; margin-bottom: 16px; letter-spacing: -.02em;
+    }
+    .hero h1 em { color: var(--orange); font-style: normal; }
+    .hero p { color: var(--muted); font-size: 15px; max-width: 420px; margin-bottom: 28px; }
+    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--orange); color: #fff;
+      padding: 12px 24px; border-radius: 8px;
+      font-size: 14px; font-weight: 600; text-decoration: none;
+      display: inline-flex; align-items: center; gap: 8px;
+      transition: background .2s, transform .15s;
+    }
+    .btn-primary:hover { background: var(--orange-dark); transform: translateY(-1px); }
+    .btn-secondary {
+      background: transparent; color: #fff;
+      border: 1px solid var(--border);
+      padding: 12px 24px; border-radius: 8px;
+      font-size: 14px; font-weight: 600; text-decoration: none;
+      display: inline-flex; align-items: center; gap: 8px;
+      transition: border-color .2s, transform .15s;
+    }
+    .btn-secondary:hover { border-color: #fff; transform: translateY(-1px); }
+
+    /* Hero card */
+    .hero-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 24px;
+    }
+    .hero-card-title {
+      font-size: 11px; font-weight: 600; color: var(--muted);
+      text-transform: uppercase; letter-spacing: .08em; margin-bottom: 16px;
+    }
+    .spec-row {
+      display: flex; align-items: center; gap: 12px;
+      padding: 12px 0; border-bottom: 1px solid var(--border);
+    }
+    .spec-row:last-of-type { border-bottom: none; }
+    .spec-icon {
+      width: 36px; height: 36px; border-radius: 8px; background: rgba(249,115,22,0.1);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .spec-icon svg { width: 18px; height: 18px; stroke: var(--orange); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .spec-name { font-size: 14px; font-weight: 600; color: #fff; }
+    .spec-sub { font-size: 12px; color: var(--muted); }
+    .gst-bar {
+      margin-top: 16px; padding: 10px 14px;
+      background: rgba(255,255,255,0.03); border: 1px solid var(--border);
+      border-radius: 8px; font-size: 12px; color: var(--muted);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .gst-bar strong { color: #fff; font-family: monospace; letter-spacing: .04em; }
+
+    /* Divider */
+    .divider { border: none; border-top: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
+
+    /* Section */
+    .section { max-width: 1100px; margin: 0 auto; padding: 64px 20px; }
+    .section-label { font-size: 11px; font-weight: 700; color: var(--orange); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 8px; }
+    .section-title { font-size: clamp(22px, 3vw, 30px); font-weight: 800; color: #fff; letter-spacing: -.02em; margin-bottom: 32px; }
+
+    /* About */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .about-text { color: var(--muted); line-height: 1.8; }
+    .checklist { margin-top: 20px; display: flex; flex-direction: column; gap: 10px; list-style: none; }
+    .checklist li { display: flex; align-items: center; gap: 10px; color: var(--text); font-size: 14px; }
+    .checklist li svg { width: 16px; height: 16px; stroke: var(--orange); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+    .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .stat-box { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px; }
+    .stat-num { font-size: 28px; font-weight: 800; color: var(--orange); line-height: 1; margin-bottom: 4px; }
+    .stat-label { font-size: 12px; color: var(--muted); }
+
+    /* Products */
+    .products-bg { background: #0A0D14; }
+    .products-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+    .product-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 10px; overflow: hidden;
+      transition: transform .25s, border-color .25s, box-shadow .25s;
+    }
+    .product-card:hover { transform: translateY(-4px); border-color: var(--orange); box-shadow: 0 8px 32px rgba(249,115,22,0.12); }
+    .product-img-wrap { width: 100%; aspect-ratio: 4/3; overflow: hidden; background: #1a1f2e; }
+    .product-img-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center;
+      display: block; transition: transform .4s;
+    }
+    .product-card:hover .product-img-wrap img { transform: scale(1.05); }
+    .product-body { padding: 18px; }
+    .product-num { font-size: 11px; font-weight: 700; color: var(--orange); letter-spacing: .08em; margin-bottom: 6px; }
+    .product-name { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+    .product-desc { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 14px; }
+    .btn-card {
+      display: flex; align-items: center; justify-content: center; gap: 7px;
+      width: 100%; padding: 10px; background: var(--orange); color: #fff;
+      border-radius: 6px; font-size: 13px; font-weight: 600; text-decoration: none;
+      transition: background .2s;
+    }
+    .btn-card:hover { background: var(--orange-dark); }
+    .btn-card svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* Contact */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+    .contact-items { display: flex; flex-direction: column; gap: 10px; }
+    .contact-row {
+      display: flex; align-items: flex-start; gap: 14px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 10px; padding: 16px; text-decoration: none; color: inherit;
+      transition: border-color .2s;
+    }
+    .contact-row:hover { border-color: var(--orange); }
+    .contact-icon-wrap {
+      width: 40px; height: 40px; border-radius: 8px; background: rgba(249,115,22,0.1);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .contact-icon-wrap svg { width: 18px; height: 18px; stroke: var(--orange); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .contact-lbl { font-size: 11px; color: var(--muted); font-weight: 500; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 6px; }
+    .contact-val { font-size: 14px; font-weight: 600; color: #fff; }
+    .contact-sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+    /* Phone row with two contacts */
+    .phone-row {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 10px; padding: 16px;
+    }
+    .phone-entry {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+    }
+    .phone-entry + .phone-entry {
+      margin-top: 12px; padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+    .phone-btns { display: flex; gap: 8px; flex-shrink: 0; }
+    .btn-call-sm {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 6px 12px; border-radius: 6px;
+      font-size: 12px; font-weight: 600; text-decoration: none;
+      transition: opacity .2s;
+    }
+    .btn-call-sm:hover { opacity: .85; }
+    .btn-call-sm svg { width: 12px; height: 12px; }
+    .btn-tel { background: var(--orange); color: #fff; }
+    .btn-tel svg { stroke: #fff; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .btn-wa  { background: #25D366; color: #fff; }
+    .btn-wa svg { fill: #fff; }
+
+    /* CTA buttons */
+    .cta-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px; }
+    .btn-cta {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 13px; border-radius: 8px; font-size: 14px; font-weight: 700;
+      text-decoration: none; transition: transform .15s, opacity .2s;
+    }
+    .btn-cta:hover { transform: translateY(-1px); opacity: .9; }
+    .btn-cta svg { width: 18px; height: 18px; flex-shrink: 0; }
+    .btn-orange { background: var(--orange); color: #fff; }
+    .btn-orange svg { stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .btn-green  { background: #25D366; color: #fff; }
+    .btn-green svg { fill: #fff; }
+
+    /* Map */
+    .map-wrap { border-radius: 10px; overflow: hidden; border: 1px solid var(--border); }
+    .map-wrap iframe { width: 100%; height: 360px; display: block; border: 0; }
+
+    /* Footer */
+    footer { border-top: 1px solid var(--border); background: #0A0C12; }
+    .footer-inner {
+      max-width: 1100px; margin: 0 auto; padding: 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 12px; flex-wrap: wrap;
+    }
+    .footer-inner span { font-size: 12px; color: var(--muted); }
+
+    /* Floating WA */
+    .wa-float {
+      position: fixed; bottom: 24px; right: 24px; z-index: 200;
+      width: 56px; height: 56px; border-radius: 50%; background: #25D366;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+      transition: transform .2s; text-decoration: none;
+    }
+    .wa-float:hover { transform: scale(1.1); }
+    .wa-float svg { width: 28px; height: 28px; fill: #fff; }
+    .wa-float::before {
+      content: ''; position: absolute; width: 100%; height: 100%;
+      border-radius: 50%; background: rgba(37,211,102,0.3);
+      animation: ping 2s ease-out infinite;
+    }
+    @keyframes ping { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(1.9); opacity: 0; } }
+
+    /* Reveal */
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .55s ease, transform .55s ease; }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; padding-top: 80px; }
+      .hero-card { display: none; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-stats { grid-template-columns: repeat(4,1fr); }
+      .products-grid { grid-template-columns: 1fr 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .nav-links a:not(.btn-nav) { display: none; }
+      .products-grid { grid-template-columns: 1fr; }
+      .about-stats { grid-template-columns: 1fr 1fr; }
+      .cta-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <div class="logo-mark">DS</div>
+      <span class="logo-text">D S Control System</span>
+    </a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:+918805800405" class="btn-nav">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 9.82a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Call Now
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section style="padding-top:56px;">
+  <div class="hero">
+    <div class="reveal">
+      <div class="hero-tag"><span></span>Ambarnath, Thane · Maharashtra</div>
+      <h1>Industrial <em>Control Panels</em> Built to Last</h1>
+      <p>Manufacturer of high-quality electrical control panels — reliable performance and timely delivery across Maharashtra.</p>
+      <div class="hero-btns">
+        <a href="tel:+918805800405" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 9.82a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Call Now
+        </a>
+        <a href="https://wa.me/918805800405" target="_blank" rel="noopener" class="btn-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="reveal hero-card">
+      <div class="hero-card-title">Our Products</div>
+      <div class="spec-row">
+        <div class="spec-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><circle cx="12" cy="14" r="2"/></svg></div>
+        <div><div class="spec-name">Power Control Panel</div><div class="spec-sub">Industrial power distribution</div></div>
+      </div>
+      <div class="spec-row">
+        <div class="spec-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        <div><div class="spec-name">Electric Control Panel</div><div class="spec-sub">Precision electrical control</div></div>
+      </div>
+      <div class="spec-row">
+        <div class="spec-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div><div class="spec-name">FLP Control Panel</div><div class="spec-sub">Flame-proof, hazardous environments</div></div>
+      </div>
+      <div class="gst-bar"><span>GST Registered</span><strong>27AYOPB8387P1ZE</strong></div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section">
+    <div class="about-grid reveal">
+      <div>
+        <div class="section-label">About Us</div>
+        <h2 class="section-title">Trusted Panel Manufacturers in Ambarnath</h2>
+        <p class="about-text">D S Control System is a dedicated manufacturer of industrial electrical control panels based in Ambarnath East, Thane. We deliver precision-built panels that meet the highest safety and reliability standards for industrial applications across Maharashtra.</p>
+        <ul class="checklist">
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Reliable & high-quality manufacturing</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Timely delivery on every order</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>GST registered business</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Custom panel solutions for industrial needs</li>
+        </ul>
+      </div>
+      <div class="about-stats">
+        <div class="stat-box"><div class="stat-num">3+</div><div class="stat-label">Panel Types</div></div>
+        <div class="stat-box"><div class="stat-num">100%</div><div class="stat-label">Quality Assured</div></div>
+        <div class="stat-box"><div class="stat-num">GST</div><div class="stat-label">Registered</div></div>
+        <div class="stat-box"><div class="stat-num">MH</div><div class="stat-label">Maharashtra</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- PRODUCTS -->
+<section id="products" class="products-bg">
+  <div class="section">
+    <div class="reveal" style="margin-bottom:32px;">
+      <div class="section-label">Our Products</div>
+      <h2 class="section-title">What We Manufacture</h2>
+    </div>
+    <div class="products-grid reveal">
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="assets/images/product1.jpg" alt="Power Control Panel" loading="lazy">
+        </div>
+        <div class="product-body">
+          <div class="product-num">01</div>
+          <div class="product-name">Power Control Panel</div>
+          <div class="product-desc">Heavy-duty panels for industrial power distribution and load management.</div>
+          <a href="tel:+918805800405" class="btn-card">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 9.82a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Enquire Now
+          </a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="assets/images/product2.jpg" alt="Electric Control Panel" loading="lazy">
+        </div>
+        <div class="product-body">
+          <div class="product-num">02</div>
+          <div class="product-name">Electric Control Panel</div>
+          <div class="product-desc">Precision-engineered panels for reliable electrical control in diverse setups.</div>
+          <a href="tel:+918805800405" class="btn-card">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 9.82a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Enquire Now
+          </a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="assets/images/product3.jpg" alt="FLP Control Panel" loading="lazy">
+        </div>
+        <div class="product-body">
+          <div class="product-num">03</div>
+          <div class="product-name">FLP Control Panel</div>
+          <div class="product-desc">Flame-proof panels built for hazardous and explosive environments.</div>
+          <a href="tel:+918805800405" class="btn-card">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 9.82a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Enquire Now
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section">
+    <div class="reveal" style="margin-bottom:32px;">
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-title">Contact Us</h2>
+    </div>
+    <div class="contact-grid reveal">
+      <div>
+        <div class="contact-items">
+
+          <!-- Phone: both contacts -->
+          <div class="phone-row">
+            <div class="contact-lbl">Phone / WhatsApp</div>
+            <div class="phone-entry">
+              <div>
+                <div class="contact-val">+91 88058 00405</div>
+                <div class="contact-sub">Deepak Bangar</div>
+              </div>
+              <div class="phone-btns">
+                <a href="tel:+918805800405" class="btn-call-sm btn-tel">
+                  <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 9.82a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+                  Call
+                </a>
+                <a href="https://wa.me/918805800405" target="_blank" rel="noopener" class="btn-call-sm btn-wa">
+                  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  WA
+                </a>
+              </div>
+            </div>
+            <div class="phone-entry">
+              <div>
+                <div class="contact-val">+91 92268 78345</div>
+                <div class="contact-sub">Shital</div>
+              </div>
+              <div class="phone-btns">
+                <a href="tel:+919226878345" class="btn-call-sm btn-tel">
+                  <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 9.82a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+                  Call
+                </a>
+                <a href="https://wa.me/919226878345" target="_blank" rel="noopener" class="btn-call-sm btn-wa">
+                  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  WA
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <a href="mailto:dscontrolsystem79@gmail.com" class="contact-row">
+            <div class="contact-icon-wrap"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div><div class="contact-lbl">Email</div><div class="contact-val" style="word-break:break-all;">dscontrolsystem79@gmail.com</div></div>
+          </a>
+
+          <!-- Address -->
+          <div class="contact-row">
+            <div class="contact-icon-wrap"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><div class="contact-lbl">Address</div><div class="contact-val" style="font-weight:500;line-height:1.7;font-size:13px;">Flat No. 15, Umiya Krupa Building,<br>B Cabin Road, Ambarnath East,<br>Thane – 421501</div></div>
+          </div>
+
+          <!-- GST -->
+          <div class="contact-row">
+            <div class="contact-icon-wrap"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
+            <div><div class="contact-lbl">GST Number</div><div class="contact-val" style="font-family:monospace;letter-spacing:.04em;">27AYOPB8387P1ZE</div></div>
+          </div>
+
+        </div>
+
+        <!-- CTA buttons -->
+        <div class="cta-row">
+          <a href="tel:+918805800405" class="btn-cta btn-orange">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 9.82a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Call Now
+          </a>
+          <a href="https://wa.me/918805800405" target="_blank" rel="noopener" class="btn-cta btn-green">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="map-wrap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3350.716987477809!2d73.18535084999999!3d19.207558449999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be79381ca149b0f%3A0x27d9e24ec4f368a6!2sAmbernath%20East%2C%20Ambernath%2C%20Maharashtra%20421501!5e1!3m2!1sen!2sin!4v1773886759100!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="D S Control System Location"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <span>© 2026 D S Control System. All rights reserved.</span>
+    <span>Ambarnath East, Thane – 421501 · GST: 27AYOPB8387P1ZE</span>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/918805800405" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>
